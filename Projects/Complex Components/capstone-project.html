@@ -1,0 +1,100 @@
+<!-- INSERT BOILER PLATE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- REACT LIBRARY-->
+ <script src="https://unpkg.com/react@15/dist/react.js"></script>
+ <!-- REACT DOM LIBRARY-->
+ <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+ <!-- BABEL LIBRARY -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Capstone Project</title>
+</head>
+<body>
+
+  <div id="app">React has not rendered yet</div>
+
+  <script type="text/babel">
+
+  var Friendly = function() {
+    var friendlyStyle={
+      height:300,
+      width: 200,
+      padding: 0,
+      backgroundColor: "#FFF",
+      filter: "drop-shadow(0px 0px 5px #555)"
+    }
+      return(
+        <div style={friendlyStyle}>
+          <Avatar/>
+          <UserName/>
+          <GetConnected/>
+        </div>
+      );
+    }
+
+  var Avatar = function() {
+    var avatarStyle={
+      marginLeft: 20,
+      marginTop: 20,
+      width: 150,
+      height: 150,
+      borderRadius: "50%"
+    }
+    return(
+        <img style={avatarStyle} alt="profile-pic" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAwVAAAAJDI5MzYxNWE3LWRmOWQtNDA1Ni04ZGRhLTVhMzIzNzQ3YWU2NA.jpg"/>
+    );
+  }
+  
+  var UserName = function() {
+    var nameStyle={
+      fontSize:20,
+      fontFamily: "Arial, Helvetica, sans-serif",
+      margin:20
+    }
+      return(
+          <h1 style={nameStyle}>Kaushal Mehra</h1>
+      );
+  }
+
+  var GetConnected = function() {
+      return(
+          <div>
+            <Like/>
+            <Share/>
+            <Add/>
+          </div>
+      );
+  }
+
+var iconStyle={
+  margin: 20
+}
+  var Like = function() {
+      return(
+          <i style={iconStyle} className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+      );
+  }
+
+  var Share = function() {
+      return(
+        <i style={iconStyle} className="fa fa-share" aria-hidden="true"></i>
+      );
+  }
+
+  var Add = function() {
+      return(
+        <i style={iconStyle} className="fa fa-users" aria-hidden="true"></i>
+      );
+  }
+  ReactDOM.render(
+    <Friendly/>,
+    document.getElementById("app")
+  );
+  </script>
+ </body>
+ </html>
